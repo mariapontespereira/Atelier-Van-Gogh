@@ -95,4 +95,4 @@ LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 
 ## 👤 Autor
 
-Desenvolvido por Maria Pereira, número 36637 no âmbito da UC Sistemas Multimédia Interactivos.
+Desenvolvido por Maria Pereira, número 36637 no âmbito da UC Sistemas Multimédia Interactivos..
