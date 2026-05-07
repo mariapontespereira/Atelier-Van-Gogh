@@ -409,7 +409,11 @@ function carregarDesenho() { // Função que tenta restaurar o desenho ao abrir 
 }
 
 function desenharCursor() { // Função que desenha o circulo indicador no lugar do ponteiro do rato
-  if (mouseY < height - 40) { // Se o rato estiver na zona de pintura (acima da madeira)
+  // Verifica se o rato está na zona de pintura (acima da madeira) E fora do painel lateral
+  let naZonaPintura = mouseY < height - 40;
+  let noPainelLateral = painelAtivo && mouseX < 260 && mouseY < 450;
+
+  if (naZonaPintura && !noPainelLateral) { // Se o rato estiver na zona de pintura (acima da madeira)
     noCursor(); // Esconde o ponteiro padrão do sistema operativo
     push(); // Inicia estilo do cursor
     stroke(isDarkCanvas ? 255 : 0, 150); strokeWeight(1); // Define contorno visível conforme o tema
