@@ -4,6 +4,8 @@ Como nem todos nascemos para ser artistas, e para quando a criatividade bloqueia
 A ideia é simples, tu não precisas de saber pintar para criar uma obra de arte. O programa faz o trabalho difícil por ti. Ao mexeres o rato, o código transforma os teus movimentos em pinceladas que parecem reais, com texturas e cores inspiradas nas obras de Van Gogh.
 
 
+
+
 ## ✨ Funcionalidades Principais
 
 **Pincel Dinâmico:** Simula cerdas de pincel reais que reagem à velocidade do movimento do rato.
@@ -17,6 +19,8 @@ A ideia é simples, tu não precisas de saber pintar para criar uma obra de arte
 Interface Adaptativa: Interface de utilizador elegante com modo claro e escuro, simulando um cavalete de madeira real.
 
 
+
+
 ## 🎨Estrutura de Paletas
 
 O projeto inclui curadoria de cores das seguintes obras:
@@ -28,6 +32,8 @@ O projeto inclui curadoria de cores das seguintes obras:
 **Retrato de Van Gogh** (Verdes petróleo e tons de terra)
 
 **Mix Van Gogh** (Exploração de contrastes com roxos, rosas e cianos)
+
+
 
 
 ## 🕹️ Atalhos de Teclado
@@ -58,6 +64,9 @@ O Atelier é otimizado para um fluxo de trabalho rápido através do teclado:
             H              |    Esconder/Mostrar painel de utilizador
             
 
+
+
+
 ## 🖥️ Tecnologias Utilizadas
 
 p5.js - Biblioteca para creative coding.
@@ -67,6 +76,8 @@ HTML5 Canvas API - Renderização gráfica de alto desempenho.
 LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 
 
+
+
 ## 🚀 Como Executar
 
 1. Copie o código fornecido para o editor online do p5.js Web Editor.
@@ -74,6 +85,8 @@ LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 2. Pressione Play.
 
 3. Utilize o rato para pintar e o teclado para controlar as ferramentas.
+
+
 
 
 ## 👤 Autor
