@@ -17,7 +17,7 @@ A ideia é simples, tu não precisas de saber pintar para criar uma obra de arte
 
 **Persistência de Dados:** O desenho é guardado automaticamente no LocalStorage do navegador, permitindo continuar o trabalho após fechar a aba.
 
-Interface Adaptativa: Interface de utilizador elegante com modo claro e escuro, simulando um cavalete de madeira real.
+**Interface Adaptativa:** Interface de utilizador elegante com modo claro e escuro, simulando um cavalete de madeira real.
 
 
 <br>
