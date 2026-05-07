@@ -83,11 +83,12 @@ LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 
 ## 🚀 Como Executar
 
-1. Copie o código fornecido para o editor online do p5.js Web Editor.
+1. Fazer o dowload ou clonar a pasta do projeto
 
-2. Pressione Play.
+2. Abrir a pasta num editor de código (ex: Visual Studio Code)
 
-3. Utilize o rato para pintar e o teclado para controlar as ferramentas.
+3. Iniciar um servidor local (recomenda-se a extensão Live Server)
+
 
 <br>
 
