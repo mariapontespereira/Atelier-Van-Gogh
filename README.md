@@ -94,7 +94,7 @@ LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 
 
 ## 🔗 Demonstração Online
-
+Podes experimentar o Atelier de Van Gogh diretamente no browser, sem instalação:
 https://mariapontespereira.github.io/Atelier-Van-Gogh/
 
 
