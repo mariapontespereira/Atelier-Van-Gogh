@@ -4,7 +4,7 @@ Como nem todos nascemos para ser artistas, e para quando a criatividade bloqueia
 A ideia é simples, tu não precisas de saber pintar para criar uma obra de arte. O programa faz o trabalho difícil por ti. Ao mexeres o rato, o código transforma os teus movimentos em pinceladas que parecem reais, com texturas e cores inspiradas nas obras de Van Gogh.
 
 
-<br><br>
+<br>
 
 
 ## ✨ Funcionalidades Principais
@@ -20,7 +20,7 @@ A ideia é simples, tu não precisas de saber pintar para criar uma obra de arte
 Interface Adaptativa: Interface de utilizador elegante com modo claro e escuro, simulando um cavalete de madeira real.
 
 
-<br><br>
+<br>
 
 
 ## 🎨Estrutura de Paletas
@@ -36,7 +36,7 @@ O projeto inclui curadoria de cores das seguintes obras:
 **Mix Van Gogh** (Exploração de contrastes com roxos, rosas e cianos)
 
 
-<br><br>
+<br>
 
 
 ## 🕹️ Atalhos de Teclado
@@ -67,7 +67,7 @@ O Atelier é otimizado para um fluxo de trabalho rápido através do teclado:
             H              |    Esconder/Mostrar painel de utilizador
             
 
-<br><br>
+<br>
 
 
 ## 🖥️ Tecnologias Utilizadas
@@ -78,7 +78,7 @@ HTML5 Canvas API - Renderização gráfica de alto desempenho.
 
 LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 
-<br><br>
+<br>
 
 
 ## 🚀 Como Executar
@@ -89,7 +89,7 @@ LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 
 3. Utilize o rato para pintar e o teclado para controlar as ferramentas.
 
-<br><br>
+<br>
 
 
 ## 👤 Autor
