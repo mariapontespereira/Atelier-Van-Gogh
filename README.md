@@ -50,7 +50,7 @@ O Atelier é otimizado para um fluxo de trabalho rápido através do teclado:
                            |
             P              |    Alternar entre paletas
                            |
-            A	           |    Alternar entre Pincel e Borracha
+            A	           |    Alternar entre pincel e borracha
                            |
            +/-             |    Aumentar / Diminuir tamanho do pincel
                            |
@@ -83,7 +83,7 @@ LocalStorage API - Para armazenamento persistente do progresso do utilizador.
 
 ## 🚀 Como Executar
 
-1. Fazer o dowload ou clonar a pasta do projeto
+1. Fazer o download ou clonar a pasta do projeto
 
 2. Abrir a pasta num editor de código (ex: Visual Studio Code)
 
