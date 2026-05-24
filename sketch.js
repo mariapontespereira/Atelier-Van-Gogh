@@ -56,8 +56,8 @@ function draw() {
   let bgColor = isDarkCanvas ? color(15, 25, 45) : color(242, 238, 220); // Escolhe a cor de fundo conforme o tema
   background(bgColor); // Pinta o fundo do canvas principal
 
-  // Condição para pintar: rato premido + não estar no menu + não estar na área da moldura inferior
-  if (mouseIsPressed && !mexendoNoPainel && mouseY < height - 40 && !(painelAtivo && mouseX < 260 && mouseY < 450)) { 
+  // Condição para pintar: rato premido + clique não começou no painel + acima da moldura inferior
+  if (mouseIsPressed && !mexendoNoPainel && mouseY < height - 40) { 
     paintVanGoghFluid(); // Executa a função de pintura personalizada
   }
 
@@ -267,8 +267,18 @@ function keyPressed() { // Função do p5.js chamada quando uma tecla é premida
 }
 
 function mousePressed() { // Chamada quando o botão do rato é premido
-  if (painelAtivo && mouseX < 260 && mouseY < 450) mexendoNoPainel = true; // Deteta se o clique foi dentro da área da UI
-  else mexendoNoPainel = false; // Se fora da UI, permite pintar
+  // Regista a posição inicial do clique para decidir se é painel ou pintura
+  if (painelAtivo && mouseX < 260 && mouseY < 450) {
+    mexendoNoPainel = true; // Clique começou dentro da UI: bloqueia pintura
+  } else {
+    mexendoNoPainel = false; // Clique começou fora da UI: permite pintar
+    // Guarda estado inicial antes de começar a pintar (para undo funcionar bem)
+    if (mouseY < height - 40) {
+      if (undoStack.length >= maxStates) undoStack.shift();
+      undoStack.push(camadaDesenho.get());
+      redoStack = [];
+    }
+  }
 }
 
 function mouseClicked() { // Chamada quando o rato é clicado e solto rapidamente
@@ -296,6 +306,8 @@ function mouseClicked() { // Chamada quando o rato é clicado e solto rapidament
 }
 
 function mouseDragged() { // Chamada enquanto o rato é movido com o botão premido
+  // mexendoNoPainel é definido no mousePressed e não muda durante o arrasto,
+  // garantindo que o comportamento (pintar ou mover slider) é consistente do início ao fim do clique
   if (painelAtivo && mexendoNoPainel) { // Se estivermos a interagir com os sliders do painel
     let mX = constrain(mouseX, 130, 230); // Limita o valor X do rato à largura visual do slider
     
@@ -318,12 +330,9 @@ function mouseDragged() { // Chamada enquanto o rato é movido com o botão prem
 }
 
 function mouseReleased() { // Chamada quando o botão do rato é solto
+  let estavaPintando = !mexendoNoPainel; // Verifica se estava a pintar (não estava no painel)
   mexendoNoPainel = false; // Garante que a flag do painel é resetada
-  let naUI = (mouseX < 260 && mouseY < 450); // Verifica se largou o rato sobre a UI
-  if (!naUI && mouseY < height - 40) { // Se largou fora da UI e fora da moldura (ou seja, estava a pintar)
-    if (undoStack.length >= maxStates) undoStack.shift(); // Remove o estado mais antigo se a lista estiver cheia
-    undoStack.push(camadaDesenho.get()); // Tira uma "foto" do canvas e guarda na pilha de desfazer
-    redoStack = []; // Sempre que há um novo traço, a pilha de refazer é limpa
+  if (estavaPintando && mouseY < height - 40) { // Se estava a pintar e largou fora da moldura
     salvarDesenho(); // Guarda o progresso no armazenamento local do navegador
   }
 }
